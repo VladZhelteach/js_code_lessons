@@ -1,0 +1,11 @@
+.header {
+    background-color: orange;
+    padding: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 15px;
+}

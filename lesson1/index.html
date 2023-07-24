@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="js_container"></div>
+    <script>
+        console.log("Hello, World!");
+        
+        document.write("Hello again!<br>");
+        document.write("Ще одна строчка<br>");
+        //alert("Повідомлення на сайті!");
+        const pi = 3.14;
+        document.write(pi);
+        document.write("<br>");
+        /*pi = 4;
+        document.write(pi);
+        document.write("<br>");*/
+        var num1 = 14;
+        document.write(num1);
+        document.write("<br>");
+        document.write('14' - 23);
+        document.write("<br>");
+        document.write(`Число PI = ${pi}<br>`); //"" '' ``
+        document.write(`Число num1 = ${num1}<br>`);
+        let num2 = 34;
+        document.write(`Число num2 = ${num2}<br>`);
+        let result1 = num1 + num2;
+        document.write(`${num1} + ${num2} = ${result1}<br>`);
+        var str1 = "Строка";
+        var str2 = "тексту";
+        var full_line = str1 + " " + str2;
+        console.log(full_line);
+        console.log(`${str1} ${str2}`);
+        var test1 = parseInt('12') + 12;
+        console.log(test1 + " тут!");
+        let flag = true; //=1 false=0 (boolean)
+        console.log(flag);
+        while (flag == true) {
+            let test_var1 = 5;
+            document.write(test_var1 + "x<br>");
+            flag = false;
+        }
+        //document.write(test_var1 + "y<br>");
+    </script>
+    <div id="div_text1">Оригинальний текст</div>
+    <script>
+        document.write(full_line + "<br>");
+        document.write(5 ** 3);
+        var div_name = "div_text1";
+        var divText1 = document.getElementById(div_name);
+        divText1.innerHTML += "<br>Текст у div<br>";
+        divText1.innerHTML += "Друга строка у div<br>";
+        divText1.style.backgroundColor = "#423F3E";
+        divText1.style.color = "#EDEDED";
+        
+        let counter = 2;
+        counter++;
+        divText1.innerHTML += `${counter}<br>`;
+        var cnt1 = counter++;
+        divText1.innerHTML += `${cnt1} ${counter}<br>`;
+        cnt1 = ++counter;
+        divText1.innerHTML += `${cnt1} ${counter}<br>`;
+
+        var number_check = 90;
+        if (number_check > 100) {
+            divText1.innerHTML += `${number_check} більше 100<br><br>`;
+        } else if (number_check == 100) {
+            divText1.innerHTML += `${number_check} равно 100<br><br>`; 
+        } else {
+            divText1.innerHTML += `${number_check} менше 100<br><br>`; 
+        }
+
+        var paramA = 1;
+        var paramB = 4;
+        var paramC = -21;
+        divText1.innerHTML += `${paramA}x<sup>2</sup> + ${paramB}x + ${paramC} = 0<br>`; 
+        var Dscr = paramB ** 2 - 4 * paramA * paramC;
+        divText1.innerHTML += `Дискримінант = ${Dscr}<br>`;
+        
+        if (Dscr > 0) {
+            let x1, x2;
+            x1 = (-paramB + Math.sqrt(Dscr)) / (2 * paramA);
+            x2 = (-paramB - Math.sqrt(Dscr)) / (2 * paramA);
+            divText1.innerHTML += `X<sub>1</sub> = ${x1}<br>`;
+            divText1.innerHTML += `X<sub>2</sub> = ${x2}<br>`;
+        } else if (Dscr == 0) {
+            let x;
+            x = -paramB / (2 * paramA);
+            divText1.innerHTML += `X = ${x}<br>`;
+        } else {
+            divText1.innerHTML += `Коренів немає<br>`;
+        }
+
+        
+    </script>
+</body>
+</html>

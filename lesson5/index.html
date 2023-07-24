@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- підключення стилю -->
+    <link rel="stylesheet" href="css/style5.css">
+    <!-- підключення JS-скрипту -->
+    <script src="js/script5.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        //add_card();
+        //пустий масив:
+        var arr1 = [];
+        //пустий об'єкт:
+        var obj1 = {};
+        //стрілкова функція, записана у змінну
+        var fnc1 = () => {
+            return 0;
+        };
+        console.log(arr1);
+        console.log(obj1);
+        console.log(fnc1);
+        //for (json)
+        //створеня картки з css-класом
+        add_card(1, "img/user.png", "John", "coder", true, ["EN", "UA"], ["C++", "JS"], ["React", "Vue"], "list_class");
+        //створеня картки без css-класу
+        add_card(2, "img/user.png", "Sam", "designer", false, ["EN", "UA"], ["CSS", "HTML"], ["Figma"], "");
+        //add_card(2, "img/user.png", "Sam", "designer", false, ["EN", "UA"], ["CSS", "HTML"], ["Figma"], "");
+    </script>
+</body>
+</html>

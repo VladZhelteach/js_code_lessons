@@ -1,0 +1,45 @@
+/*клас, що містить змінні-кольори для світлої теми*/
+.theme-light {
+    --color-bg: #EDEDED;
+    --color-bg2: #C4C4C4;
+    --color-text1: #171010;
+    --color-text2: #423F3E;
+    --font-text3: #2B2B2B;
+}
+
+/*клас, що містить змінні-кольори для темної теми*/
+.theme-dark {
+    --color-bg: #423F3E;
+    --color-bg2: #2B2B2B;
+    --color-text1: #EDEDED;
+    --color-text2: #C4C4C4;
+    --font-text3: #ffffff;
+}
+
+body {
+    background-color: var(--color-bg);
+}
+
+body a {
+    color: var(--font-text3);
+}
+
+#container {
+    background-color: var(--color-bg2);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100px;
+    height: 200px;
+    background-color: blueviolet;
+    margin: 15px;
+}
+
+#theme_icon {
+    width: 50px;
+    cursor: crosshair;
+}

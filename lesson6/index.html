@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- підключення стилю -->
+    <link rel="stylesheet" href="css/style6.css">
+    <!-- підключення JSON/JS-скрипту -->
+    <script src="data/datalist1.js"></script>
+    <!-- підключення JS-скрипту -->
+    <script src="js/script6.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        //перетворення JSON-тексту на JS-об'єкт
+        var obj_arr = JSON.parse(obj_arr_json);
+        console.log(obj_arr);
+
+        //перебір масиву об'єктів
+        for (let ind in obj_arr) {
+            add_card(obj_arr[ind]);
+        }
+    </script>    
+
+</body>
+</html>

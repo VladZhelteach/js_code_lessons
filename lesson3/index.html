@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- підключення стилю -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- підключення JS-скрипту -->
+    <script src="js/script3.js"></script>
+    <title>Document</title>
+</head>
+    <body onload="theme();"> <!-- підвантажуємо тему після завантаження сторінки (onload) за допомогою своєї функції theme() з файлу script3.js -->
+    <input type="text" id="text_input"><br>
+    <button onclick="write_text_to_div_2();">НАТИСНИ МЕНЕ!</button> <!-- доповнюємо контент div-a функцією write_text_to_div_2(), при натисканні кнопки, подія onclick -->
+
+    <div id="container"></div> <!-- div, з яким працюємо через JS, для цього задаємо id="container" -->
+    <script>
+        //закоментовані виклики функцій прямо у html-файлі:
+        /*write_text();
+        write_text();
+        write_text();*/
+        /*write_text_to_div("Перший текст");
+        write_text_to_div("Другий текст");*/
+
+        //виклики функцій прямо у html-файлі:
+        let summa = summ(12, 32, 71);
+        console.log(summa);
+    </script>
+    <div class="header" id="header_id"></div>
+    <input type="text" id="calc_name" onmouseover="text_over();" onmouseleave="text_off();"> <!-- фикликаємо функції text_over та text_off при наведенні та відведенні курсору -->
+    <!-- калькулятор, набір кнопок, чиї функції описані у JS файлі script3.js: -->
+    <table border="0">
+    <tr>
+        <td><button onclick="addSymbol('+');">+</button></td>
+        <td><button onclick="addSymbol('-');">-</button></td>
+        <!-- виконання розрахунку -->
+        <td><button onclick="calc_exec();">=</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="addSymbol('/');">/</button></td>
+        <td><button onclick="addSymbol('*');">*</button></td>
+        <!-- очистка поля: -->
+        <td><button onclick="clear_text();">Clear</button></td>
+    </tr>
+    <tr>
+    <td><button onclick="addSymbol('1');">1</button></td>
+    <td><button onclick="addSymbol('2');">2</button></td>
+    <td><button onclick="addSymbol('3');">3</button></td>
+    </tr>
+    <tr>
+    <td><button onclick="addSymbol('4');">4</button></td>
+    <td><button onclick="addSymbol('5');">5</button></td>
+    <td><button onclick="addSymbol('6');">6</button></td>
+    </tr>
+    <tr>
+    <td><button onclick="addSymbol('7');">7</button></td>
+    <td><button onclick="addSymbol('8');">8</button></td>
+    <td><button onclick="addSymbol('9');">9</button></td>
+    </tr>
+    <tr>
+    <td><button onclick="addSymbol('0');">0</button></td>
+    <td><button onclick="addSymbol('00');">00</button></td>
+    <td><button onclick="addSymbol('.');">.</button></td>
+    </tr>
+    </table>
+
+    <!-- текстова форма із закладеним заздалегіть текстом -->
+    <textarea id="ide">
+    var x = 13;
+    var y = 3;
+    var result = x ** y;
+    console.log(result);
+    </textarea>
+    <!-- кнопка з викликом функції "фнтерпретації", по подіїї onclick -->
+    <button onclick="exec();">Інтерпретувати</button>
+</body>
+</html>

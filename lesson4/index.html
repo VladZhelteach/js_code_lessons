@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- підключення стилю -->
+    <link rel="stylesheet" href="css/style4.css">
+    <!-- підключення JS-скрипту -->
+    <script src="js/script4.js"></script>
+    <title>Document</title>
+</head>
+<body class="theme-light"> <!-- клас відповідає за тему -->
+    <a href="#" onclick="add_text();" id="top_link">Натисни!</a> <!-- функція викликається по події onclick -->
+    <img src="img/moon.jpg" alt="theme" id="theme_icon" onmouseover="switch_theme();"><br> <!-- тема перемикається по наведенню мишкою-->
+    <!-- onclick="switch_theme();" -->
+    <img src="img/UA.png" alt="UA" onmouseover="setUA();"> <!-- перемикається мова на українську -->
+    <img src="img/EN.png" alt="EN" onmouseover="setEN();"> <!-- перемикається мова на англійську -->
+    <!-- onmouseover="setDark();"  onmouseleave="setLight();" -->
+    <div id="container" onclick="add_card();"></div> <!-- перемикається мова на англійську -->
+    <script>
+        //код JS на HTML-сторінці, у невеликих обсягах допускається, тут тестуємо виклики функцій з виводом на консоль
+        var result = summ(12, 43, 56);
+        console.log(result);
+        var check1 = check(100, 90);
+        console.log(check1);
+        var check2 = check_a(100, 190);
+        console.log(check2);
+        console.log(check_a(200, 190));
+
+        //виводимо у консоль об'єкт
+        console.log(card1);
+        //виводимо у консоль параметр об'єкта
+        console.log(card1.descr);
+        //виводимо у консоль параметр об'єкта, що є параметром іншого об'єкта
+        console.log(card1.obj.subtitle);
+
+    </script>
+</body>
+</html>
